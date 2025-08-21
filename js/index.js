@@ -21,9 +21,20 @@ document.addEventListener("DOMContentLoaded", () => {
     const initial_section = window.location.hash.substring(1);
     loadSection(initial_section);
     menu_toggle.addEventListener("click", () => {
-        sidebar.classList.add("active");
+        if (!sidebar.classList.contains("active")) {
+            sidebar.classList.add("active");
+            sidebar.setAttribute("aria-hidden", "false");
+            menu_toggle.setAttribute("aria-expanded", "true");
+        }
+        else {
+            sidebar.classList.remove("active");
+            sidebar.setAttribute("aria-hidden", "false");
+            menu_toggle.setAttribute("aria-expanded", "true");
+        }
     });
     menu_close.addEventListener("click", () => {
         sidebar.classList.remove("active");
+        sidebar.setAttribute("aria-hidden", "true");
+        menu_toggle.setAttribute("aria-expanded", "false");
     });
 });
