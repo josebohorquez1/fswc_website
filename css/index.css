@@ -80,13 +80,14 @@ footer {
 
 .form-container {
     width: 100%;
-    height: auto;       /* Let container grow with content */
-    overflow: visible;  /* Allow scrolling */
+    height: auto;
+    overflow: visible;
 }
 
 .form-container iframe {
     width: 100%;
-    min-height: 80vh;  /* Let page scroll instead of iframe */
+    height: auto;
+    min-height: 80vh;
     border: none;
 }
 
@@ -147,9 +148,5 @@ footer {
 
     nav.sidebar.active #menu-toggle {
         display: none;
-    }
-
-    .form-container iframe {
-        min-height: 200vh;
     }
 }
