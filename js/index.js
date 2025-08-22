@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu_close = document.getElementById("menu-close");
     const sidebar = document.getElementById("sidebar");
     const nav_links = document.querySelectorAll("nav.sidebar a");
-    function isMobile () {
+    function isMobile() {
         return window.matchMedia("(max-width:768px)").matches;
     }
     function loadSection(section) {
@@ -41,7 +41,6 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.setAttribute("aria-hidden", "true");
         menu_toggle.setAttribute("aria-expanded", "false");
     });
-});
 if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
 nav_links.forEach(link => {
     link.addEventListener("click", () => {
@@ -51,4 +50,5 @@ nav_links.forEach(link => {
             menu_toggle.setAttribute("aria-expanded", "false");
         }
     });
+});
 });
