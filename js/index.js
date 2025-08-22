@@ -28,8 +28,8 @@ document.addEventListener("DOMContentLoaded", () => {
         }
         else {
             sidebar.classList.remove("active");
-            sidebar.setAttribute("aria-hidden", "false");
-            menu_toggle.setAttribute("aria-expanded", "true");
+            sidebar.setAttribute("aria-hidden", "true");
+            menu_toggle.setAttribute("aria-expanded", "false");
         }
     });
     menu_close.addEventListener("click", () => {

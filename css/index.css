@@ -89,7 +89,6 @@ footer {
         "footer";
     }
     nav.sidebar {
-        display: none;
         position: fixed;
         top: 0;
         left: 0;
@@ -103,13 +102,15 @@ footer {
         transform: translateX(-100%);
     }
     nav.sidebar.active {
-        display: block;
         transform: translateX(0);
     }
     #menu-toggle {
         display: block;
     }
     #menu-close {
+        display: none;
+    }
+    nav.sidebar.active #menu-close {
         display: block;
     }
 }
