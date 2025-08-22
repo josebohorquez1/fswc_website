@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
 if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
 nav_links.forEach(link => {
     link.addEventListener("click", () => {
-        if (window.innerWidth <= 768) {
+        if (isMobile()) {
             sidebar.classList.remove("active");
             sidebar.setAttribute("aria-hidden", "true");
             menu_toggle.setAttribute("aria-expanded", "false");
