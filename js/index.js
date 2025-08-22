@@ -8,26 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function loadSection(section) {
         if (!section) section = "welcome";
-        if (section == "membership") {
-            const form_container = document.createElement("div");
-            form_container.classList.add("form-container");
-            const iframe = document.createElement("iframe");
-            iframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true";
-            iframe.setAttribute("title", "Membership Form");
-            form_container.appendChild(iframe);
-            main_element.innerHTML = "";
-            main_element.appendChild(form_container);
-        }
-        else {
-            fetch(`${section}.html`).then(response => {
-                if (!response.ok) throw new Error("Page not found.");
-                return response.text();
-            }).then(html => {
-                main_element.innerHTML = html;
-            }).catch(() => {
-                main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
-            });
-        }
+        fetch(`${section}.html`).then(response => {
+            if (!response.ok) throw new Error("Page not found.");
+            return response.text();
+        }).then(html => {
+            main_element.innerHTML = html;
+        }).catch(() => {
+            main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
+        });
     }
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
