@@ -81,8 +81,8 @@ footer {
 .form-container {
     position: relative;
     width: 100%;
-    height: 100vh;
-    overflow: auto;
+    padding-top: 80%;
+    overflow: hidden;
 }
 
 .form-container iframe {
@@ -92,12 +92,6 @@ footer {
     width: 100%;
     height: 100%;
     border: none;
-}
-
-@media (min-width: 769px) {
-    .form-container {
-        padding-top: 80%; /* shorter on desktop */
-    }
 }
 
 @media (max-width: 768px) {
@@ -110,6 +104,7 @@ footer {
         "main"
         "footer";
     }
+
     nav.sidebar {
         position: fixed;
         top: 0;
@@ -125,29 +120,49 @@ footer {
         display: flex;
         flex-direction: column;
     }
+
     nav.sidebar.active {
         transform: translateX(0);
     }
+
     nav.sidebar a {
         display: block;
         width: 100%;
         padding: 0.75rem;
         box-sizing: border-box;
     }
+
     nav.sidebar a:hover {
         background-color: #ddd;
         text-decoration: none;
     }
+
     #menu-toggle {
         display: block;
     }
+
     #menu-close {
         display: none;
     }
+
     nav.sidebar.active #menu-close {
         display: block;
     }
+
     nav.sidebar.active #menu-toggle {
         display: none;
+    }
+
+    .form-container {
+        position: static;
+        padding-top: 0;
+        height: auto;
+        overflow: visible;
+    }
+
+    .form-container iframe {
+        position: static;
+        width: 100%;
+        height: 100vh;
     }
 }
