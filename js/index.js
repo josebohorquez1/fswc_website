@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
             main_element.appendChild(iframe);
         }
         else {
-        fetch(`${section}.html`).then(response => {
+        fetch(`pages/${section}.html`).then(response => {
             if (!response.ok) throw new Error("Page not found.");
             return response.text();
         }).then(html => {
