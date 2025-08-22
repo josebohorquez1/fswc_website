@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu_toggle = document.getElementById("menu-toggle");
     const menu_close = document.getElementById("menu-close");
     const sidebar = document.getElementById("sidebar");
+    function isMobile () {
+        return window.matchMedia("(max-width:768px)").matches;
+    }
     function loadSection(section) {
         if (!section) section = "welcome";
         fetch(`${section}.html`).then(response => {
@@ -38,3 +41,4 @@ document.addEventListener("DOMContentLoaded", () => {
         menu_toggle.setAttribute("aria-expanded", "false");
     });
 });
+if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
