@@ -17,16 +17,17 @@ document.addEventListener("DOMContentLoaded", () => {
             form_container.appendChild(iframe);
             main_element.innerHTML = "";
             main_element.appendChild(form_container);
-            return;
         }
-        fetch(`${section}.html`).then(response => {
-            if (!response.ok) throw new Error("Page not found.");
-            return response.text();
-        }).then(html => {
-            main_element.innerHTML = html;
-        }).catch(() => {
-            main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
-        });
+        else {
+            fetch(`${section}.html`).then(response => {
+                if (!response.ok) throw new Error("Page not found.");
+                return response.text();
+            }).then(html => {
+                main_element.innerHTML = html;
+            }).catch(() => {
+                main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
+            });
+        }
     }
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
