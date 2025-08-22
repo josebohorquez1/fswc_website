@@ -106,6 +106,16 @@ footer {
     nav.sidebar.active {
         transform: translateX(0);
     }
+    nav.sidebar a {
+        display: block;
+        width: 100%;
+        padding: 0.75rem;
+        box-sizing: border-box;
+    }
+    nav.sidebar a:hover {
+        background-color: #ddd;
+        text-decoration: none;
+    }
     #menu-toggle {
         display: block;
     }
