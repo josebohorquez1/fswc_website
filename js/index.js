@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const menu_toggle = document.getElementById("menu-toggle");
     const menu_close = document.getElementById("menu-close");
     const sidebar = document.getElementById("sidebar");
+    const nav_links = document.querySelectorAll("nav.sidebar a");
     function isMobile () {
         return window.matchMedia("(max-width:768px)").matches;
     }
@@ -42,3 +43,12 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 });
 if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
+nav_links.forEach(link => {
+    link.addEventListener("click", () => {
+        if (window.innerWidth <= 768) {
+            sidebar.classList.remove("active");
+            sidebar.setAttribute("aria-hidden", "true");
+            menu_toggle.setAttribute("aria-expanded", "false");
+        }
+    });
+});
