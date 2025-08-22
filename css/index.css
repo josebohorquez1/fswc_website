@@ -103,6 +103,8 @@ footer {
     }
     nav.sidebar.active {
         transform: translateX(0);
+        display: flex;
+        flex-direction: column;
     }
     #menu-toggle {
         display: block;
@@ -112,5 +114,8 @@ footer {
     }
     nav.sidebar.active #menu-close {
         display: block;
+    }
+    nav.sidebar.active #menu-toggle {
+        display: none;
     }
 }
