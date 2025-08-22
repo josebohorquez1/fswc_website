@@ -8,6 +8,14 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function loadSection(section) {
         if (!section) section = "welcome";
+        if (section == "membership") {
+            const iframe = document.createElement("iframe");
+            iframe.src = "https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true";
+            iframe.title = "Membership Form";
+            main_element.innerHTML = "";
+            main_element.appendChild(iframe);
+        }
+        else {
         fetch(`${section}.html`).then(response => {
             if (!response.ok) throw new Error("Page not found.");
             return response.text();
@@ -16,6 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }).catch(() => {
             main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
         });
+            }
     }
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
