@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadSection(section) {
         if (!section) section = "welcome";
         if (section == "membership") createFrame("https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true", "Membership Form");
-        else if (section == "constitution") createFrame("docs/constitution.htm", "Our Constitution");
+        else if (section == "constitution") createFrame("docs/constitution.html", "Our Constitution");
         else {
         fetch(`pages/${section}.html`).then(response => {
             if (!response.ok) throw new Error("Page not found.");
