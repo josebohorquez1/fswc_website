@@ -84,6 +84,30 @@ main iframe {
     border: none;
 }
 
+.tab-list {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 2px solid #ccc;
+}
+
+.tab-list [role="tab"] {
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border: 1px solid #ccc;
+    border-bottom: none;
+    background: #f4f4f4;
+}
+
+.tab-list [role="tab"][aria-selected="true"] {
+    background: white;
+    border-bottom: 2px solid white;
+    font-weight: bold;
+}
+
+.tab-list [role="tab"]:focus {
+    outline: 2px solid #004080;
+}
+
 @media (max-width: 768px) {
     body {
         display: flex;
