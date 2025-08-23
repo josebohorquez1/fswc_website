@@ -6,17 +6,19 @@ document.addEventListener("DOMContentLoaded", () => {
     function isMobile() {
         return window.matchMedia("(max-width:768px)").matches;
     }
-    function createFrame(src, title) {
+    function createFrame(src) {
+        const alt_paragraph = document.createElement("p");
+        alt_paragraph.innerHTML = `If you use a screen reader, you may find it easier to <a href="${src}" target="_blank">open the link directly</a>.`;
         const iframe = document.createElement("iframe");
         iframe.src = src;
-        iframe.title = title;
         main_element.innerHTML = "";
+        main_element.appendChild(alt_paragraph);
         main_element.appendChild(iframe);
     }
     function loadSection(section) {
         if (!section) section = "welcome";
-        if (section == "membership") createFrame("https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true", "Membership Form");
-        else if (section == "constitution") createFrame("docs/constitution.html", "Our Constitution");
+        if (section == "membership") createFrame("https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true");
+        else if (section == "constitution") createFrame("docs/constitution.html");
         else {
         fetch(`pages/${section}.html`).then(response => {
             if (!response.ok) throw new Error("Page not found.");
