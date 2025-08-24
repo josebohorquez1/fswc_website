@@ -31,10 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (panel_id == "panel-1") iframe.src = "https://nfbnet.org/mailman/listinfo/nfbf-statewide_nfbnet.org";
         else iframe.src = "https://nfbnet.org/mailman/listinfo/nfbf-l_nfbnet.org";
         iframe.innerHTML = "Loading...";
-        const alt_paragraph = document.createElement("p");
-        alt_paragraph.innerHTML = `If you use a screen reader, you may find it easier to <a href="${iframe.src}" target="_blank">open the link directly</a>.`;
         document.getElementById(panel_id).innerHTML = "";
-        document.getElementById(panel_id).appendChild(alt_paragraph);
         document.getElementById(panel_id).appendChild(iframe);
         document.getElementById(panel_id).setAttribute("tabindex", "0");
         document.getElementById(panel_id).hidden = false;
