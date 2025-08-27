@@ -119,12 +119,6 @@ section img {
     border-radius: 8px;
 }
 
-main iframe {
-    width: 100%;
-    min-height: 2114px;
-    border: none;
-}
-
 .tab-list {
     display: flex;
     gap: 0.5rem;
