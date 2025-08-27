@@ -80,7 +80,7 @@ section {
 }
 
 section h2 {
-    font-size: 1.4rem;
+    font-size: 1.33rem;
     font-weight: bold;
     text-align: center;
     margin-bottom: 0.5rem;
@@ -102,6 +102,15 @@ section p {
     margin: 0 auto 1rem auto;
 }
 
+section ul, section ol {
+    margin-left: 1.5rem;
+    padding: 1rem;
+}
+
+section ul li, section ol li {
+    font-size: 1.2rem;
+    line-height: 1.5;
+}
 section img {
     display: block;
     max-width: 100%;

@@ -6,17 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function isMobile() {
         return window.matchMedia("(max-width:768px)").matches;
     }
-    function createFrame(src) {
-        if (isMobile()) {
-            const alt_paragraph = document.createElement("p");
-            alt_paragraph.innerHTML = `If you use a screen reader on a mobile device, you may find it easier to <a href="${src}" target="_blank">open the link directly</a>.`;
-            main_element.appendChild(alt_paragraph);
-        }
-        const iframe = document.createElement("iframe");
-        iframe.src = src;
-        main_element.innerHTML = "";
-        main_element.appendChild(iframe);
-    }
     function activateTab(tab) {
         const tabs = document.querySelectorAll("[role='tab']");
         const panels = document.querySelectorAll("[role='tabpanel']");
@@ -104,20 +93,16 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function loadSection(section) {
         if (!section) section = "home";
-        if (section == "membership") createFrame("https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true");
-        else if (section == "constitution") createFrame("docs/constitution.html");
-        else {
-        fetch(`pages/${section}.html`).then(response => {
-            if (!response.ok) throw new Error("Page not found.");
-            return response.text();
-        }).then(html => {
-            main_element.innerHTML = html;
-            if (section == "mailing_list") setupTabs();
-            if (section == "minutes") loadMinutes();
-        }).catch(() => {
-            main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
-        });
-            }
+    fetch(`pages/${section}.html`).then(response => {
+        if (!response.ok) throw new Error("Page not found.");
+        return response.text();
+    }).then(html => {
+        main_element.innerHTML = html;
+        if (section == "mailing_list") setupTabs();
+        if (section == "minutes") loadMinutes();
+    }).catch(() => {
+        main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
+    });
     }
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
