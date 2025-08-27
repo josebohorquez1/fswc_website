@@ -70,7 +70,36 @@ document.addEventListener("DOMContentLoaded", () => {
                 }
             });
         });
-}
+    }
+    function loadMinutes() {
+        fetch("docs/Minutes/minutes.json").then(response => response.json()).then(data => {
+            const container = document.getElementById("minutesContainer");
+            Object.keys(data).sort((a, b) => a - b).forEach(year => {
+                const button = document.createElement("button");
+                button.textContent = year;
+                button.className = "year-button";
+                button.setAttribute("aria-expanded", "false");
+                const links_div = document.createElement("div");
+                links_div.className = "minutes-links";
+                links_div.hidden = true;
+                data[year].forEach(item => {
+                    const link = document.createElement("a");
+                    link.href = item.url;
+                    link.textContent = item.title;
+                    link.target = "_blank";
+                    links_div.appendChild(link);
+                    links_div.appendChild(document.createElement("br"));
+                });
+                button.addEventListener("click", () => {
+                    const expanded = button.getAttribute("aria-expanded") === "true";
+                    button.setAttribute("aria-expanded", String(!expanded));
+                    links_div.hidden = expanded;
+                });
+                container.appendChild(button);
+                container   .appendChild(links_div);
+        });
+        });
+    }
     function loadSection(section) {
         if (!section) section = "welcome";
         if (section == "membership") createFrame("https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true");
@@ -82,6 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }).then(html => {
             main_element.innerHTML = html;
             if (section == "mailing_list") setupTabs();
+            if (section == "minutes") loadMinutes();
         }).catch(() => {
             main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
         });

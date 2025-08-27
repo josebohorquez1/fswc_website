@@ -1,0 +1,22 @@
+{
+    "2024": [
+        {"title": "March 17th Business Meeting", "url": "docs/Minutes/2024/03-17-2024.html"},
+        {"title": "April 21st Business Meeting", "url": "docs/Minutes/2024/04-21-2024.html"},
+        {"title": "May 19th Business Meeting", "url": "docs/Minutes/2024/05-19-2024.html"},
+        {"title": "June 9th Business Meeting", "url": "docs/Minutes/2024/06-09-2024.html"},
+        {"title": "July 21st Business Meeting", "url": "docs/Minutes/2024/07-21-2024.html"},
+        {"title": "August 18th Business Meeting", "url": "docs/Minutes/2024/08-18-2024.html"},
+        {"title": "September 15th Business Meeting", "url": "docs/Minutes/2024/09-15-2024.html"},
+        {"title": "October 20th Business Meeting", "url": "docs/Minutes/2024/10-20-2024.html"},
+        {"title": "December 15th Business Meeting", "url": "docs/Minutes/2024/12-15-2024.html"}
+    ],
+    "2025": [
+        {"title": "January 19th Business Meeting", "url": "docs/Minutes/2025/01-19-2025.html"},
+        {"title": "February 16th Business Meeting", "url": "docs/Minutes/2025/02-16-2025.html"},
+        {"title": "March 16th Business Meeting", "url": "docs/Minutes/2025/03-16-2025.html"},
+        {"title": "May 18th Business Meeting", "url": "docs/Minutes/2025/05-18-2025.html"},
+        {"title": "June 21st Business Meeting", "url": "docs/Minutes/2025/06-21-2025.html"},
+        {"title": "July 20th Business Meeting", "url": "docs/Minutes/2025/07-20-2025.html"},
+        {"title": "August 18th Business Meeting", "url": "docs/Minutes/2025/08-18-2025.html"}
+    ]
+}

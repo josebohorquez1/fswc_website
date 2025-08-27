@@ -108,6 +108,35 @@ main iframe {
     outline: 2px solid #004080;
 }
 
+.year-button {
+    display:block;
+    width:100%;
+    padding:0.5rem;
+    text-align: left;
+    margin: 0.25rem;
+    border: none;
+    background: #004080;
+    color: white;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.minutes-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.minutes-links a {
+    text-decoration: none;
+    color: #004080;
+    padding-left: 1rem;
+}
+
+.minutes-links a:hover {
+    text-decoration: underline;
+}
+
 @media (max-width: 768px) {
     body {
         display: flex;
