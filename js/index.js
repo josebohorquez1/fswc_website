@@ -7,12 +7,14 @@ document.addEventListener("DOMContentLoaded", () => {
         return window.matchMedia("(max-width:768px)").matches;
     }
     function createFrame(src) {
-        const alt_paragraph = document.createElement("p");
-        alt_paragraph.innerHTML = `If you use a screen reader, you may find it easier to <a href="${src}" target="_blank">open the link directly</a>.`;
+        if (isMobile()) {
+            const alt_paragraph = document.createElement("p");
+            alt_paragraph.innerHTML = `If you use a screen reader on a mobile device, you may find it easier to <a href="${src}" target="_blank">open the link directly</a>.`;
+            main_element.appendChild(alt_paragraph);
+        }
         const iframe = document.createElement("iframe");
         iframe.src = src;
         main_element.innerHTML = "";
-        main_element.appendChild(alt_paragraph);
         main_element.appendChild(iframe);
     }
     function activateTab(tab) {
