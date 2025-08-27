@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     function loadSection(section) {
-        if (!section) section = "welcome";
+        if (!section) section = "home";
         if (section == "membership") createFrame("https://docs.google.com/forms/d/e/1FAIpQLSfB8VUYoqEEwK6-XKYPWTimVWTtab5Coy1pTiKX6KFBDPVIdg/viewform?embedded=true");
         else if (section == "constitution") createFrame("docs/constitution.html");
         else {
