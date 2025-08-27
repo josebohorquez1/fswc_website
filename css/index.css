@@ -70,12 +70,40 @@ main {
     padding: 1rem;
 }
 
-footer {
-    grid-area: footer;
-    background-color: #004080;
-    color: white;
-    text-align: center;
+section {
+    margin: 2rem;
     padding: 1rem;
+}
+
+section h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    color: #004080;
+}
+
+section h3 {
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 1rem;
+    color: #004080;
+}
+
+section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    max-width: 700px;
+    text-align: left;
+    margin: 0 auto 1rem auto;
+}
+
+section img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 1rem auto;
+    border-radius: 8px;
 }
 
 main iframe {
@@ -139,6 +167,14 @@ main iframe {
 
 .minutes-links a:hover {
     text-decoration: underline;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #004080;
+    color: white;
+    text-align: center;
+    padding: 1rem;
 }
 
 @media (max-width: 768px) {
