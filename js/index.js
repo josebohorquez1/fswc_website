@@ -100,6 +100,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }).catch(() => {
         main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
     });
+    const nav_links = document.querySelectorAll("nav a");
+    nav_links.forEach(link => link.removeAttribute("aria-current"));
+    Array.from(nav_links).find(link => link.getAttribute("href").substring(1) == section)?.setAttribute("aria-current", "true");
     }
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
