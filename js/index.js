@@ -6,62 +6,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function isMobile() {
         return window.matchMedia("(max-width:768px)").matches;
     }
-    function activateTab(tab) {
-        const tabs = document.querySelectorAll("[role='tab']");
-        const panels = document.querySelectorAll("[role='tabpanel']");
-        tabs.forEach(t => {
-            t.setAttribute("aria-selected", "false");
-            t.setAttribute("tabindex", "-1");
-        });
-        panels.forEach(panel => panel.hidden = true);
-        tab.setAttribute("aria-selected", "true");
-        tab.removeAttribute("tabindex");
-        tab.focus();
-        const panel_id = tab.getAttribute("aria-controls");
-        const iframe = document.createElement("iframe");
-        if (panel_id == "panel-1") iframe.src = "https://nfbnet.org/mailman/listinfo/nfbf-statewide_nfbnet.org";
-        else iframe.src = "https://nfbnet.org/mailman/listinfo/nfbf-l_nfbnet.org";
-        iframe.innerHTML = "Loading...";
-        document.getElementById(panel_id).innerHTML = "";
-        document.getElementById(panel_id).appendChild(iframe);
-        document.getElementById(panel_id).setAttribute("tabindex", "0");
-        document.getElementById(panel_id).hidden = false;
-    }
-    function setupTabs() {
-        const tabs = document.querySelectorAll("[role='tab']");
-        tabs.forEach(tab => {
-            tab.addEventListener("click", () => activateTab(tab));
-            tab.addEventListener("keydown", e => {
-                let new_tab;
-                switch (e.key) {
-                    case "ArrowLeft":
-                    case "ArrowUp":
-                        new_tab = tab.previousElementSibling || tab.parentElement.lastElementChild;
-                        new_tab.focus();
-                        break;
-                    case "ArrowRight":
-                    case "ArrowDown":
-                        new_tab = tab.nextElementSibling || tab.parentElement.firstElementChild;
-                        new_tab.focus();
-                        break;
-                    case "Home":
-                        new_tab = tab.parentElement.firstElementChild;
-                        new_tab.focus();
-                        break;
-                    case "End":
-                        new_tab = tab.parentElement.lastElementChild;
-                        new_tab.focus();
-                        break;
-                        case "Enter":
-                            case " ":
-                                activateTab(new_tab);
-                                break;
-                                    default:
-                                        return;
-                }
-            });
-        });
-    }
     function loadMinutes() {
         fetch("docs/Minutes/minutes.json").then(response => response.json()).then(data => {
             const container = document.getElementById("minutesContainer");
@@ -91,6 +35,59 @@ document.addEventListener("DOMContentLoaded", () => {
         });
         });
     }
+    function loadAnnouncements() {
+        const announcements_container = document.getElementById("announcementsContainer");
+        const list = document.createElement("ul");
+        const article = document.createElement("article");
+        const sorted_data = fetch("docs/announcements/announcements.json").then(response => response.json()).then(data => {
+            if (!data) {
+                announcements_container.innerHTML += "<p>No announcements available at this time.</p>";
+                return;
+            }
+           const sorted_data = data.sort((a, b) => new Date(b.date) - new Date(a.date));
+           sorted_data.forEach(item => {
+            const list_item = document.createElement("li");
+            const link = document.createElement("a");
+            link.textContent = item.title;
+            link.setAttribute("aria-current", "false");
+            list_item.appendChild(link);
+            list.appendChild(list_item);
+    });
+            announcements_container.appendChild(list);
+            announcements_container.appendChild(article);
+    const links = document.querySelectorAll("#announcementsContainer ul li a");
+        links.forEach(link => {
+            link.addEventListener("click", event => {
+                event.preventDefault();
+                links.forEach(l => l.removeAttribute("aria-current"));
+                link.setAttribute("aria-current", "true");
+                article.innerHTML = "";
+                const obj = data.find(i => i.title === link.textContent);
+                const header = document.createElement("header");
+                const title = document.createElement("h3");
+                title.textContent = obj.title;
+                const date = document.createElement("p");
+                date.textContent = new Date(obj.date).toLocaleDateString(undefined, { year: 'numeric', month: 'long', day: 'numeric' });
+                const author = document.createElement("p");
+                author.textContent = `By: ${obj.author}`;
+                header.appendChild(title);
+                header.appendChild(date);
+                header.appendChild(author);
+                article.appendChild(header);
+                fetch(obj.url).then(response => {
+                    if (!response.ok) throw new Error("Announcement content not found.");
+                    return response.text();
+                }).then(html => {
+                    const content_div = document.createElement("div");
+                    content_div.innerHTML = html;
+                    article.appendChild(content_div);
+                }).catch(() => {
+                    article.innerHTML += "<p>Sorry, the announcement content could not be loaded.</p>";
+                });
+            });
+        });
+    });
+    }
     function loadSection(section) {
         if (!section) section = "home";
     fetch(`pages/${section}.html`).then(response => {
@@ -98,8 +95,8 @@ document.addEventListener("DOMContentLoaded", () => {
         return response.text();
     }).then(html => {
         main_element.innerHTML = html;
-        if (section == "mailing_list") setupTabs();
         if (section == "minutes") loadMinutes();
+        if (section == "announcements") loadAnnouncements();
     }).catch(() => {
         main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
     });
