@@ -49,6 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const list_item = document.createElement("li");
             const link = document.createElement("a");
             link.textContent = item.title;
+            link.href = "javascript:void(0)";
             link.setAttribute("aria-current", "false");
             list_item.appendChild(link);
             list.appendChild(list_item);
