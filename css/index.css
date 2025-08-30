@@ -142,6 +142,11 @@ a:hover {
     text-decoration: underline;
 }
 
+a:active {
+    color: #D2451E;
+    text-decoration: underline;
+}
+
 #minutesContainer p {
     margin-bottom: 1.5rem;
 }
@@ -198,6 +203,7 @@ nav.sidebar i, footer i {
     margin-right: 0.5rem;
     color: #D2451E;
 }
+
 @media (max-width: 768px) {
     body {
         display: flex;
