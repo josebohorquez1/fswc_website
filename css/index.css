@@ -276,6 +276,7 @@ nav.sidebar i, footer i {
 
     #menu-toggle {
         display: block;
+        padding: 0.75rem 1rem;
     }
 
     #menu-close {
