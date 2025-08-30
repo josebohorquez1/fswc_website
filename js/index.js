@@ -79,9 +79,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (!response.ok) throw new Error("Announcement content not found.");
                     return response.text();
                 }).then(html => {
-                    const content_div = document.createElement("div");
-                    content_div.innerHTML = html;
-                    article.appendChild(content_div);
+                    article.innerHTML += html;
                 }).catch(() => {
                     article.innerHTML += "<p>Sorry, the announcement content could not be loaded.</p>";
                 });
