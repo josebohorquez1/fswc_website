@@ -85,8 +85,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 fetch(obj.url).then(response => {
                     if (!response.ok) throw new Error("Announcement content not found.");
                     return response.text();
-                }).then(html => {
-                    article.innerHTML += html;
+                }).then(md => {
+                    article.innerHTML += marked.parse(md);
                 }).catch(() => {
                     article.innerHTML += "<p>Sorry, the announcement content could not be loaded.</p>";
                 });
