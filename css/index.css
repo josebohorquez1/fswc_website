@@ -283,14 +283,11 @@ nav.sidebar i, footer i {
         transform: translateY(-100%);
         display: flex;
         flex-direction: column;
+        border: none;
     }
 
         nav.sidebar.active {
         transform: translateY(0);
-    }
-
-        nav.sidebar #menu-close {
-        display: none;
     }
 
     nav.sidebar.active #menu-close {
@@ -299,15 +296,15 @@ nav.sidebar i, footer i {
         margin-bottom: 0.5rem;
     }
 
-    nav.sidebar.active #menu-toggle {
-        display: none;
-    }
-
     nav.sidebar ul {
         list-style: none;
         padding: 0;
         margin: 0;
+        display:flex;
+        flex-direction: column;
         flex: 1;
+        align-items: center;
+        justify-content: center;
         overflow-y: auto;
     }
 
