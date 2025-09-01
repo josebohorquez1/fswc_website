@@ -302,6 +302,7 @@ nav.sidebar i, footer i {
         margin-bottom: 1rem;
         font-size: 1.5rem;
         font-weight: bold;
+        cursor: pointer;
     }
 
     nav.sidebar ul {
@@ -312,7 +313,6 @@ nav.sidebar i, footer i {
         flex-direction: column;
         flex: 1;
         align-items: center;
-        justify-content: center;
         overflow-y: auto;
     }
 
