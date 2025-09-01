@@ -225,6 +225,12 @@ nav.sidebar i, footer i {
     }
 
     header {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        min-height: 60px;
         display: flex;
         margin: 0;
         padding: 0 1rem;
@@ -250,7 +256,7 @@ nav.sidebar i, footer i {
         background-color: #fff;
         padding: 1rem;
         transition: left 0.3s ease;
-        z-index: 1000;
+        z-index: 1001;
         transform: translateX(-100%);
         display: flex;
         flex-direction: column;
