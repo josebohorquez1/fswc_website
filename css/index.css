@@ -290,10 +290,11 @@ nav.sidebar i, footer i {
         transform: translateY(0);
     }
 
-    nav.sidebar.active #menu-close {
-        display: block;
+    nav #menu-close {
+        flex-shrink: 0;
+        align-self: center;
         color: #1C5C9C;
-        margin-bottom: 0.5rem;
+        margin-bottom: 1rem;
     }
 
     nav.sidebar ul {
