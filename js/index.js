@@ -26,8 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 data[year].forEach(item => {
                     const link = document.createElement("a");
                     link.href = `pages/minutes.html?date=${item.date}`;
-                    link.innerHTML = `${item.title}<span class="sr-only">(link opens in a new tab)</span>`;
-                    link.target = "_blank";
+                    link.innerHTML = `${item.title}`;
                     links_div.appendChild(link);
                     links_div.appendChild(document.createElement("br"));
                 });
