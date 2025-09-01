@@ -106,8 +106,7 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
         loadSection(section);
-        if (isMobile() && sidebar.classList.contains("active")) {
-            sidebar.classList.remove("active");
+        if (isMobile() && !sidebar.classList.contains("active")) {
             sidebar.setAttribute("aria-hidden", "true");
             menu_toggle.setAttribute("aria-expanded", "false");
         }

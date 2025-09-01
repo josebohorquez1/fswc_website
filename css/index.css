@@ -51,15 +51,33 @@ nav.sidebar {
     flex-direction: column;
 }
 
-nav.sidebar a {
-    margin-bottom: 0.5rem;
-    padding: 1rem;
-    text-decoration: none;
-    color: #1C5C9C;
-    font-weight: bold;
+nav.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
-nav.sidebar a:hover {
+nav.sidebar ul li {
+    margin: 1rem 0;
+}
+
+nav.sidebar ul li a {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    color: #1C5C9C;
+    font-size: 1.5rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav.sidebar ul li a:hover {
+    text-decoration: underline;
+    color: #D2451E;
+}
+
+nav.sidebar ul li a:active {
     text-decoration: underline;
     color: #D2451E;
 }
@@ -238,6 +256,11 @@ nav.sidebar i, footer i {
         color: white;
         align-items: center;
     }
+    
+    #menu-toggle {
+        display: block;
+        padding: 0.75rem 1rem;
+    }
 
     main {
         flex: 1;
@@ -250,42 +273,23 @@ nav.sidebar i, footer i {
         position: fixed;
         top: 0;
         left: 0;
+        right: 0;
         width: 100%;
-        max-width: 300px;
         height: 100%;
         background-color: #fff;
         padding: 1rem;
-        transition: left 0.3s ease;
+        transition: down 0.3s ease;
         z-index: 1001;
-        transform: translateX(-100%);
+        transform: translateY(-100%);
         display: flex;
         flex-direction: column;
     }
 
-    nav.sidebar.active {
-        transform: translateX(0);
+        nav.sidebar.active {
+        transform: translateY(0);
     }
 
-    nav.sidebar a {
-        display: block;
-        width: 100%;
-        padding: 1rem;
-        margin-bottom: 0.5rem;
-        color: #1C5C9C;
-        text-decoration: none;
-    }
-
-    nav.sidebar a:hover {
-        color: #D2451E;
-        text-decoration: underline;
-    }
-
-    #menu-toggle {
-        display: block;
-        padding: 0.75rem 1rem;
-    }
-
-    #menu-close {
+        nav.sidebar #menu-close {
         display: none;
     }
 
@@ -297,6 +301,33 @@ nav.sidebar i, footer i {
 
     nav.sidebar.active #menu-toggle {
         display: none;
+    }
+
+    nav.sidebar ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        flex: 1;
+        overflow-y: auto;
+    }
+
+    nav.sidebar ul li {
+        margin: 0.5rem 0;
+    }
+
+    nav.sidebar ul li a {
+        display: block;
+        width: 100%;
+        padding: 1rem;
+        color: #1C5C9C;
+        font-size: 1.5rem;
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    nav.sidebar ul li a:hover {
+        color: #D2451E;
+        text-decoration: underline;
     }
 
     footer {
