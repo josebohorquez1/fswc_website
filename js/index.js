@@ -7,6 +7,12 @@ document.addEventListener("DOMContentLoaded", () => {
         return window.matchMedia("(max-width:768px)").matches;
     }
     function loadMinutes() {
+        main_element.innerHTML = `
+                                    <section id="minutesContainer" aria-labelledby="meetingMinutesHeading">
+                                        <h2 id="meetingMinutesHeading">Our Meeting Minutes</h2>
+                                        <p>Below are the minutes from our recent meetings. Click on a year and a month to view the minutes.</p>
+                                    </section>
+                                    `;
         fetch("docs/Minutes/minutes.json").then(response => response.json()).then(data => {
             const container = document.getElementById("minutesContainer");
             Object.keys(data).sort((a, b) => a - b).forEach(year => {
@@ -19,13 +25,14 @@ document.addEventListener("DOMContentLoaded", () => {
                 links_div.hidden = true;
                 data[year].forEach(item => {
                     const link = document.createElement("a");
-                    link.href = item.url;
+                    link.href = `pages/minutes.html?date=${item.date}`;
                     link.innerHTML = `${item.title}<span class="sr-only">(link opens in a new tab)</span>`;
                     link.target = "_blank";
                     links_div.appendChild(link);
                     links_div.appendChild(document.createElement("br"));
                 });
-                button.addEventListener("click", () => {
+                button.addEventListener("click", e => {
+                    e.preventDefault();
                     const expanded = button.getAttribute("aria-expanded") === "true";
                     button.setAttribute("aria-expanded", String(!expanded));
                     links_div.hidden = expanded;
@@ -89,6 +96,10 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function loadSection(section) {
         if (!section) section = "home";
+        if (section == "minutes") {
+            loadMinutes();
+            return;
+        }
     fetch(`pages/${section}.html`).then(response => {
         if (!response.ok) throw new Error("Page not found.");
         return response.text();

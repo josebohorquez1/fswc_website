@@ -1,4 +1,40 @@
-<section id="minutesContainer" aria-labelledby="meetingMinutesHeading">
-    <h2 id="meetingMinutesHeading">Our Meeting Minutes</h2>
-    <p>Below are the minutes from our recent meetings. Click on a year and a month to view the minutes.</p>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Meeting Minutes</title>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+</head>
+<body>
+  <header>
+    <a href="/index.html#minutes">← Return to minutes</a>
+  </header>
+
+  <main id="minutesContainer"></main>
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const date = params.get("date");
+    if (!date) {
+        document.getElementById("minutesContainer").innerHTML = "<p>No date provided. Please return to the <a href='/index.html#minutes'>minutes page</a> and select a date.</p>";
+    } else {
+        fetch("/docs/Minutes/minutes.json").then(res => res.json()).then(data => {
+            let obj;
+            for (const year in data) {
+                obj = data[year].find(item => item.date === date);
+                if (obj) break;
+            }
+            if (!obj) {
+                document.getElementById("minutesContainer").innerHTML = "<p>No minutes found for the provided date. Please return to the <a href='/index.html#minutes'>minutes page</a> and select a valid date.</p>";
+            } else {
+                fetch(obj.url).then(res => res.text()).then(md => {
+                    document.getElementById("minutesContainer").innerHTML = marked.parse(md);
+                });
+            }
+        }).catch(err => {
+            document.getElementById("minutesContainer").innerHTML = "<p>Error loading minutes. Please try again later.</p>";
+            console.error(err);
+        });
+    }
+  </script>
+  </body>
+</html>
