@@ -278,7 +278,7 @@ nav.sidebar i, footer i {
         height: 100%;
         background-color: #fff;
         padding: 1rem;
-        transition: down 0.3s ease;
+        transition: transform 0.3s ease;
         z-index: 1001;
         transform: translateY(-100%);
         display: flex;
