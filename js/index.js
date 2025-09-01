@@ -106,13 +106,14 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
         loadSection(section);
-        if (isMobile() && !sidebar.classList.contains("active")) {
+        if (isMobile() && sidebar.classList.contains("active")) {
             sidebar.setAttribute("aria-hidden", "true");
             menu_toggle.setAttribute("aria-expanded", "false");
         }
     });
     const initial_section = window.location.hash.substring(1);
     loadSection(initial_section);
+    if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
     menu_toggle.addEventListener("click", () => {
         if (!sidebar.classList.contains("active")) {
             sidebar.classList.add("active");
