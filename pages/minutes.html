@@ -17,7 +17,7 @@
     if (!date) {
         document.getElementById("minutesContainer").innerHTML = "<p>No date provided. Please return to the <a href='../index.html#minutes'>minutes page</a> and select a date.</p>";
     } else {
-        fetch("/docs/Minutes/minutes.json").then(res => res.json()).then(data => {
+        fetch("../docs/Minutes/minutes.json").then(res => res.json()).then(data => {
             let obj;
             for (const year in data) {
                 obj = data[year].find(item => item.date === date);
