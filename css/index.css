@@ -257,7 +257,7 @@ nav.sidebar i, footer i {
         align-items: center;
     }
     
-    #menu-toggle {
+    header #menu-toggle {
         display: block;
         padding: 0.75rem 1rem;
     }
@@ -291,10 +291,14 @@ nav.sidebar i, footer i {
     }
 
     nav #menu-close {
+        display: block;
         flex-shrink: 0;
         align-self: center;
+        padding: 0.75rem 1rem;
         color: #1C5C9C;
         margin-bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: bold;
     }
 
     nav.sidebar ul {
@@ -323,7 +327,7 @@ nav.sidebar i, footer i {
         text-decoration: none;
     }
 
-    nav.sidebar ul li a:hover {
+    nav.sidebar ul li a:focus {
         color: #D2451E;
         text-decoration: underline;
     }
