@@ -308,7 +308,7 @@ nav.sidebar i, footer i {
     nav.sidebar ul {
         list-style: none;
         padding: 0;
-        margin: 0;
+        margin: 3rem;
         display:flex;
         flex-direction: column;
         flex: 1;
