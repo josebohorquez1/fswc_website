@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 data[year].forEach(item => {
                     const link = document.createElement("a");
                     link.href = item.url;
-                    link.textContent = item.title;
+                    link.innerHTML = `${item.title}<span class="sr-only">(link opens in a new tab)</span>`;
                     link.target = "_blank";
                     links_div.appendChild(link);
                     links_div.appendChild(document.createElement("br"));
