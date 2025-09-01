@@ -7,7 +7,7 @@
 </head>
 <body>
   <header>
-    <a href="/index.html#minutes">← Return to minutes</a>
+    <a href="../index.html#minutes">← Return to minutes</a>
   </header>
 
   <main id="minutesContainer"></main>
@@ -15,7 +15,7 @@
     const params = new URLSearchParams(window.location.search);
     const date = params.get("date");
     if (!date) {
-        document.getElementById("minutesContainer").innerHTML = "<p>No date provided. Please return to the <a href='/index.html#minutes'>minutes page</a> and select a date.</p>";
+        document.getElementById("minutesContainer").innerHTML = "<p>No date provided. Please return to the <a href='../index.html#minutes'>minutes page</a> and select a date.</p>";
     } else {
         fetch("/docs/Minutes/minutes.json").then(res => res.json()).then(data => {
             let obj;
@@ -24,7 +24,7 @@
                 if (obj) break;
             }
             if (!obj) {
-                document.getElementById("minutesContainer").innerHTML = "<p>No minutes found for the provided date. Please return to the <a href='/index.html#minutes'>minutes page</a> and select a valid date.</p>";
+                document.getElementById("minutesContainer").innerHTML = "<p>No minutes found for the provided date. Please return to the <a href='../index.html#minutes'>minutes page</a> and select a valid date.</p>";
             } else {
                 fetch(obj.url).then(res => res.text()).then(md => {
                     document.getElementById("minutesContainer").innerHTML = marked.parse(md);
