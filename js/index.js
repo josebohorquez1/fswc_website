@@ -52,24 +52,23 @@ document.addEventListener("DOMContentLoaded", () => {
            const sorted_data = data.sort((a, b) => new Date(b.date) - new Date(a.date));
            sorted_data.forEach(item => {
             const list_item = document.createElement("li");
-            const link = document.createElement("a");
-            link.textContent = item.title;
-            link.href = "javascript:void(0)";
-            link.setAttribute("aria-current", "false");
-            list_item.appendChild(link);
+            const button = document.createElement("button");
+            button.textContent = item.title;
+            button.setAttribute("aria-current", "false");
+            list_item.appendChild(button);
             list.appendChild(list_item);
     });
             announcements_container.appendChild(list);
-    const links = document.querySelectorAll("#announcementsContainer ul li a");
-        links.forEach(link => {
-            link.addEventListener("click", event => {
+    const buttons = document.querySelectorAll("#announcementsContainer ul li button");
+        buttons.forEach(b => {
+            b.addEventListener("click", event => {
                 event.preventDefault();
-                links.forEach(l => l.removeAttribute("aria-current"));
-                link.setAttribute("aria-current", "true");
+                buttons.forEach(i => i.removeAttribute("aria-current"));
+                b.setAttribute("aria-current", "true");
                 const old_article = announcements_container.querySelector("article");
                 if (old_article) old_article.remove();
                 const article = document.createElement("article");
-                const obj = data.find(i => i.title === link.textContent);
+                const obj = data.find(i => i.title === b.textContent);
                 const header = document.createElement("header");
                 const title = document.createElement("h3");
                 title.textContent = obj.title;
