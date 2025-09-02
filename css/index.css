@@ -151,7 +151,7 @@ section img {
     border-radius: 0.25rem;
 }
 
-#announcementsContainer ul li button [aria-current="true"] {
+#announcementsContainer ul li button[aria-current="true"] {
     font-weight: bold;
 }
 
