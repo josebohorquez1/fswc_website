@@ -44,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadAnnouncements() {
         const announcements_container = document.getElementById("announcementsContainer");
         const list = document.createElement("ul");
-        const article = document.createElement("article");
         const sorted_data = fetch("docs/announcements/announcements.json").then(response => response.json()).then(data => {
             if (!data) {
                 announcements_container.innerHTML += "<p>No announcements available at this time.</p>";
@@ -61,14 +60,15 @@ document.addEventListener("DOMContentLoaded", () => {
             list.appendChild(list_item);
     });
             announcements_container.appendChild(list);
-            announcements_container.appendChild(article);
     const links = document.querySelectorAll("#announcementsContainer ul li a");
         links.forEach(link => {
             link.addEventListener("click", event => {
                 event.preventDefault();
                 links.forEach(l => l.removeAttribute("aria-current"));
                 link.setAttribute("aria-current", "true");
-                article.innerHTML = "";
+                const old_article = announcements_container.querySelector("article");
+                if (old_article) old_article.remove();
+                const article = document.createElement("article");
                 const obj = data.find(i => i.title === link.textContent);
                 const header = document.createElement("header");
                 const title = document.createElement("h3");
@@ -86,8 +86,9 @@ document.addEventListener("DOMContentLoaded", () => {
                     return response.text();
                 }).then(md => {
                     article.innerHTML += marked.parse(md);
+                    announcements_container.appendChild(article);
                 }).catch(() => {
-                    article.innerHTML += "<p>Sorry, the announcement content could not be loaded.</p>";
+                    announcements_container.innerHTML += "<p>Sorry, the announcement content could not be loaded.</p>";
                 });
             });
         });
