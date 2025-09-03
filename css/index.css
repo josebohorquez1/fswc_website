@@ -161,7 +161,6 @@ section img {
   border-radius: 0.75rem;
   padding: 1rem;
   box-shadow: 0 2px 4px rgba(0,0,0,0.05);
-  margin-top: 1rem;
 }
 
 #announcementContent header {
@@ -316,7 +315,7 @@ nav.sidebar i, footer i {
         display: flex;
         flex-direction: column;
         padding: 1.25rem;
-        margin-top: 60px;
+        margin-top: 80px;
     }
 
     nav.sidebar {
