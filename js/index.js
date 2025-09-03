@@ -131,7 +131,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const section = window.location.hash.substring(1);
         loadSection(section);
         if (isMobile() && sidebar.classList.contains("active")) {
-            sidebar.setAttribute("aria-hidden", "true");
             menu_toggle.setAttribute("aria-expanded", "false");
             sidebar.classList.remove("active");
         }
@@ -141,19 +140,15 @@ document.addEventListener("DOMContentLoaded", () => {
     menu_toggle.addEventListener("click", () => {
         if (!sidebar.classList.contains("active")) {
             sidebar.classList.add("active");
-            sidebar.setAttribute("aria-hidden", "false");
             menu_toggle.setAttribute("aria-expanded", "true");
         }
         else {
             sidebar.classList.remove("active");
-            sidebar.setAttribute("aria-hidden", "true");
             menu_toggle.setAttribute("aria-expanded", "false");
         }
     });
     menu_close.addEventListener("click", () => {
         sidebar.classList.remove("active");
-        sidebar.setAttribute("aria-hidden", "true");
         menu_toggle.setAttribute("aria-expanded", "false");
     });
-if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
 });

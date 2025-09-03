@@ -16,7 +16,7 @@ body {
     font-size: 16px;
 }
 
-header {
+.banner {
     grid-area: header;
     background-color: #1C5C9C;
     color: white;
@@ -25,20 +25,20 @@ header {
     align-items: center;
 }
 
-header h1 {
+.banner h1 {
     flex: 1;
     margin: 0;
     font-size: 1.5rem;
 }
 
-header img {
+.banner img {
     max-height: 40px;
     width: auto;
     height: auto;
     margin-left: auto;
 }
 
-header #menu-toggle {
+.banner #menu-toggle {
     display: none;
 }
 
@@ -286,7 +286,7 @@ nav.sidebar i, footer i {
         color: #333;
     }
 
-    header {
+    banner {
         position: fixed;
         top: 0;
         left: 0;
@@ -301,7 +301,7 @@ nav.sidebar i, footer i {
         align-items: center;
     }
     
-    header #menu-toggle {
+    banner #menu-toggle {
         display: block;
         padding: 1rem;
         font-size: 1.25rem;
