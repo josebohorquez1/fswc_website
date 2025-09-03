@@ -316,6 +316,7 @@ nav.sidebar i, footer i {
         display: flex;
         flex-direction: column;
         padding: 1.25rem;
+        margin-top: 60px;
     }
 
     nav.sidebar {
