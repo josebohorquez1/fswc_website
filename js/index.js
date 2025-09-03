@@ -121,6 +121,7 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isMobile() && sidebar.classList.contains("active")) {
             sidebar.setAttribute("aria-hidden", "true");
             menu_toggle.setAttribute("aria-expanded", "false");
+            sidebar.classList.remove("active");
         }
     });
     const initial_section = window.location.hash.substring(1);
