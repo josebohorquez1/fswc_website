@@ -43,7 +43,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     function loadAnnouncements() {
         const announcements_container = document.createElement("section");
-        announcements_container.id = "announcementsContainer";
         announcements_container.setAttribute("aria-labelledby", "announcementsHeading");
         announcements_container.innerHTML = `
     <h2 id="announcementsHeading">Announcements</h2>
@@ -94,6 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     return response.text();
                 }).then(md => {
                     const content = document.createElement("div");
+                    content.id = "announcementContainer";
                     content.innerHTML = marked.parse(md);
                     article.appendChild(content);
                     main_element.appendChild(article);
