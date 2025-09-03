@@ -42,7 +42,16 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
     function loadAnnouncements() {
-        const announcements_container = document.getElementById("announcementsContainer");
+        const announcements_container = document.createElement("section");
+        announcements_container.id = "announcementsContainer";
+        announcements_container.setAttribute("aria-labelledby", "announcementsHeading");
+        announcements_container.innerHTML = `
+    <h2 id="announcementsHeading">Announcements</h2>
+    <p>Welcome to the Announcements section of the Florida Statewide Chapter website! Here, you'll find the latest news, updates, and important information about our chapter's activities and events. Stay informed and connected with us!</p>
+    <p>Click each link to view an announcement.</p>
+        `
+        main_element.innerHTML = "";
+        main_element.appendChild(announcements_container);
         const list = document.createElement("ul");
         const sorted_data = fetch("docs/announcements/announcements.json").then(response => response.json()).then(data => {
             if (!data) {
@@ -101,13 +110,15 @@ document.addEventListener("DOMContentLoaded", () => {
             loadMinutes();
             return;
         }
+        if (section == "announcements") {
+            loadAnnouncements();
+            return;
+        }
     fetch(`pages/${section}.html`).then(response => {
         if (!response.ok) throw new Error("Page not found.");
         return response.text();
     }).then(html => {
         main_element.innerHTML = html;
-        if (section == "minutes") loadMinutes();
-        if (section == "announcements") loadAnnouncements();
     }).catch(() => {
         main_element.innerHTML = "<p>Sorry, that page could not be loaded.</p>";
     });
