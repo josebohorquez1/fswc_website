@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 event.preventDefault();
                 buttons.forEach(i => i.removeAttribute("aria-current"));
                 b.setAttribute("aria-current", "true");
-                const old_article = announcements_container.querySelector("article");
+                const old_article = main_element.querySelector("article");
                 if (old_article) old_article.remove();
                 const article = document.createElement("article");
                 const obj = data.find(i => i.title === b.textContent);
