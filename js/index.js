@@ -44,6 +44,7 @@ document.addEventListener("DOMContentLoaded", () => {
     function loadAnnouncements() {
         const announcements_container = document.createElement("section");
         announcements_container.setAttribute("aria-labelledby", "announcementsHeading");
+        announcements_container.id = "announcementsContainer";
         announcements_container.innerHTML = `
     <h2 id="announcementsHeading">Announcements</h2>
     <p>Welcome to the Announcements section of the Florida Statewide Chapter website! Here, you'll find the latest news, updates, and important information about our chapter's activities and events. Stay informed and connected with us!</p>
@@ -93,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     return response.text();
                 }).then(md => {
                     const content = document.createElement("div");
-                    content.id = "announcementContainer";
+                    content.id = "announcementContent";
                     content.innerHTML = marked.parse(md);
                     article.appendChild(content);
                     main_element.appendChild(article);

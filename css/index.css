@@ -155,7 +155,7 @@ section img {
     font-weight: bold;
 }
 
-#announcementsContainer article {
+#announcementContent article {
   background-color: #fff;
   border: 1px solid #339999;
   border-radius: 0.75rem;
@@ -164,26 +164,26 @@ section img {
   margin-top: 1rem;
 }
 
-#announcementsContainer article header {
+#announcementContent article header {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     margin-bottom: 1rem;
 }
 
-#announcementsContainer article header h3 {
+#announcementContent article header h3 {
     margin-bottom: 1rem;
   color: #1C5C9C;
   font-size: 1.4rem;
   font-weight: bold;
 }
 
-#announcementsContainer article h4 {
+#announcementContent article h4 {
     color: #1C5C9C;
     margin-bottom: 1rem;
 }
 
-#announcementsContainer article div p {
+#announcementContent article p {
   margin-bottom: 0.5rem;
 }
 
