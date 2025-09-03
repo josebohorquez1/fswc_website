@@ -77,6 +77,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 const old_article = main_element.querySelector("article");
                 if (old_article) old_article.remove();
                 const article = document.createElement("article");
+                article.id = "announcementContent";
                 const obj = data.find(i => i.title === b.textContent);
                 const header = document.createElement("header");
                 const title = document.createElement("h3");
@@ -94,7 +95,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     return response.text();
                 }).then(md => {
                     const content = document.createElement("div");
-                    content.id = "announcementContent";
                     content.innerHTML = marked.parse(md);
                     article.appendChild(content);
                     main_element.appendChild(article);
