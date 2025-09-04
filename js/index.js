@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const link = document.createElement("a");
             link.textContent = item.title;
             link.setAttribute("aria-current", "false");
+            if (isMobile()) link.setAttribute("aria-haspopup", "dialog");
             link.href = "javascript:void(0);";
             list_item.appendChild(link);
             list.appendChild(list_item);
