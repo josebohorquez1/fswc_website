@@ -115,6 +115,8 @@ document.addEventListener("DOMContentLoaded", () => {
                         document.body.appendChild(modal);
                                 }
                                 modal.hidden = false;
+                                const other_elements = document.querySelectorAll("body > *:not(.modal)");
+                                other_elements.forEach(el => el.inert = true);
                         const close_button = document.createElement("button");
                         close_button.className = "modal-close";
                         close_button.textContent = "X";
@@ -123,6 +125,7 @@ document.addEventListener("DOMContentLoaded", () => {
                         close_button.addEventListener("click", () => {
                             modal.hidden = true;
                             l.focus();
+                            other_elements.forEach(el => el.inert = false);
                         });
                         article.prepend(close_button);
                         modal.appendChild(article);
