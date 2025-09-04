@@ -16,7 +16,7 @@ body {
     font-size: 16px;
 }
 
-.banner {
+header.banner {
     grid-area: header;
     background-color: #1C5C9C;
     color: white;
@@ -25,20 +25,21 @@ body {
     align-items: center;
 }
 
-.banner h1 {
+header.banner h1 {
     flex: 1;
     margin: 0;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
-.banner img {
+header.banner img {
     max-height: 40px;
     width: auto;
     height: auto;
     margin-left: auto;
 }
 
-.banner #menu-toggle {
+header.banner #menu-toggle {
     display: none;
 }
 
@@ -286,7 +287,7 @@ nav.sidebar i, footer i {
         color: #333;
     }
 
-    .banner {
+    header.banner {
         position: fixed;
         top: 0;
         left: 0;
@@ -299,9 +300,10 @@ nav.sidebar i, footer i {
         background-color: #1C5C9C;
         color: white;
         align-items: center;
+        gap: 0.25rem;
     }
     
-    .banner #menu-toggle {
+    header.banner #menu-toggle {
         display: block;
         padding: 1rem;
         font-size: 1.25rem;

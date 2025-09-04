@@ -126,7 +126,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const nav_links = document.querySelectorAll("nav a");
     nav_links.forEach(link => link.removeAttribute("aria-current"));
     Array.from(nav_links).find(link => link.getAttribute("href").substring(1) == section)?.setAttribute("aria-current", "true");
-    if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
     }
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
@@ -134,7 +133,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (isMobile() && sidebar.classList.contains("active")) {
             menu_toggle.setAttribute("aria-expanded", "false");
             sidebar.classList.remove("active");
-            sidebar.setAttribute("aria-hidden", "true");
         }
     });
     const initial_section = window.location.hash.substring(1);
@@ -143,17 +141,14 @@ document.addEventListener("DOMContentLoaded", () => {
         if (!sidebar.classList.contains("active")) {
             sidebar.classList.add("active");
             menu_toggle.setAttribute("aria-expanded", "true");
-            sidebar.setAttribute("aria-hidden", "false");
         }
         else {
             sidebar.classList.remove("active");
             menu_toggle.setAttribute("aria-expanded", "false");
-            sidebar.setAttribute("aria-hidden", "true");
         }
     });
     menu_close.addEventListener("click", () => {
         sidebar.classList.remove("active");
-        sidebar.setAttribute("aria-hidden", "true");
         menu_toggle.setAttribute("aria-expanded", "false");
     });
 });
