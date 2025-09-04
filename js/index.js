@@ -118,7 +118,11 @@ document.addEventListener("DOMContentLoaded", () => {
                         close_button.className = "modal-close";
                         close_button.textContent = "X";
                         close_button.setAttribute("aria-label", "Close");
-                        close_button.addEventListener("click", () => modal.hidden = true);
+                        close_button.focus();
+                        close_button.addEventListener("click", () => {
+                            modal.hidden = true;
+                            l.focus();
+                        });
                         article.prepend(close_button);
                         modal.appendChild(article);
                     }
