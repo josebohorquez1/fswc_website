@@ -406,7 +406,6 @@ nav.sidebar i, footer i {
     }
 
     div.modal #announcementContent {
-        position: relative;
         flex: 1;
         display: flex;
         flex-direction: column;
@@ -416,10 +415,6 @@ nav.sidebar i, footer i {
         padding: 1rem;
         box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         overflow-y: auto;
-    }
-
-    div.modal #announcementContent #announcementBody {
-        flex: 1;
     }
 
     footer {
