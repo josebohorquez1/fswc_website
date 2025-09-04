@@ -127,7 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
                             l.focus();
                             other_elements.forEach(el => el.inert = false);
                         });
-                        article.prepend(close_button);
+                        modal.appendChild(close_button);
                         modal.appendChild(article);
                     }
                 }).catch(() => {

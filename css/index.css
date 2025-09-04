@@ -393,6 +393,18 @@ nav.sidebar i, footer i {
         display: none;
     }
 
+    div.modal button.modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        padding: 0.5rem;
+        color: #1C5C9C;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+
     div.modal #announcementContent {
         position: relative;
         flex: 1;
@@ -406,20 +418,7 @@ nav.sidebar i, footer i {
         overflow-y: auto;
     }
 
-    div.modal #announcementContent button.modal-close {
-        position: absolute;
-        top: 1rem;
-        right: 1rem;
-        background: none;
-        border: none;
-        padding: 0.5rem;
-        color: #1C5C9C;
-        font-size: 1.5rem;
-        cursor: pointer;
-    }
-
     div.modal #announcementContent #announcementBody {
-
         flex: 1;
     }
 
