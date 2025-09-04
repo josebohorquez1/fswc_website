@@ -165,6 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     });
     const initial_section = window.location.hash.substring(1);
+    if (isMobile()) sidebar.setAttribute("aria-hidden", "true");
     loadSection(initial_section);
     menu_toggle.addEventListener("click", () => {
         if (!sidebar.classList.contains("active")) {
