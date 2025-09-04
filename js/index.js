@@ -77,7 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
                 links.forEach(i => i.removeAttribute("aria-current"));
                 l.setAttribute("aria-current", "true");
                     }
-                const old_article = main_element.querySelector("article");
+                    let old_article;
+                    if (isMobile()) old_article = document.querySelector(".modal");
+                    else old_article = main_element.querySelector("article");
                 if (old_article) old_article.remove();
                 const article = document.createElement("article");
                 article.id = "announcementContent";
