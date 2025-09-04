@@ -286,7 +286,7 @@ nav.sidebar i, footer i {
         color: #333;
     }
 
-    banner {
+    .banner {
         position: fixed;
         top: 0;
         left: 0;
@@ -301,7 +301,7 @@ nav.sidebar i, footer i {
         align-items: center;
     }
     
-    banner #menu-toggle {
+    .banner #menu-toggle {
         display: block;
         padding: 1rem;
         font-size: 1.25rem;
