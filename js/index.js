@@ -61,24 +61,27 @@ document.addEventListener("DOMContentLoaded", () => {
            const sorted_data = data.sort((a, b) => new Date(b.date) - new Date(a.date));
            sorted_data.forEach(item => {
             const list_item = document.createElement("li");
-            const button = document.createElement("button");
-            button.textContent = item.title;
-            button.setAttribute("aria-current", "false");
-            list_item.appendChild(button);
+            const link = document.createElement("a");
+            link.textContent = item.title;
+            link.setAttribute("aria-current", "false");
+            link.href = "javascript:void(0);";
+            list_item.appendChild(link);
             list.appendChild(list_item);
     });
             announcements_container.appendChild(list);
-    const buttons = document.querySelectorAll("#announcementsContainer ul li button");
-        buttons.forEach(b => {
-            b.addEventListener("click", event => {
+    const links = document.querySelectorAll("#announcementsContainer ul li a");
+        links.forEach(l => {
+            l.addEventListener("click", event => {
                 event.preventDefault();
-                buttons.forEach(i => i.removeAttribute("aria-current"));
-                b.setAttribute("aria-current", "true");
+                if (!isMobile()) {
+                links.forEach(i => i.removeAttribute("aria-current"));
+                l.setAttribute("aria-current", "true");
+                    }
                 const old_article = main_element.querySelector("article");
                 if (old_article) old_article.remove();
                 const article = document.createElement("article");
                 article.id = "announcementContent";
-                const obj = data.find(i => i.title === b.textContent);
+                const obj = data.find(i => i.title === l.textContent);
                 const header = document.createElement("header");
                 const title = document.createElement("h3");
                 title.textContent = obj.title;
@@ -95,9 +98,28 @@ document.addEventListener("DOMContentLoaded", () => {
                     return response.text();
                 }).then(md => {
                     const content = document.createElement("div");
+                    content.id= "announcementBody";
                     content.innerHTML = marked.parse(md);
                     article.appendChild(content);
-                    main_element.appendChild(article);
+                    if (!isMobile()) main_element.appendChild(article);
+                    else {
+                        let modal = document.querySelector(".modal");
+                        if (!modal) {
+                        modal = document.createElement("div");
+                        modal.className = "modal";
+                        modal.setAttribute("role" ,"dialog");
+                        modal.setAttribute("aria-label", "Announcement Details");
+                        document.body.appendChild(modal);
+                                }
+                                modal.hidden = false;
+                        const close_button = document.createElement("button");
+                        close_button.className = "modal-close";
+                        close_button.textContent = "X";
+                        close_button.setAttribute("aria-label", "Close");
+                        close_button.addEventListener("click", () => modal.hidden = true);
+                        article.prepend(close_button);
+                        modal.appendChild(article);
+                    }
                 }).catch(() => {
                     announcements_container.innerHTML += "<p>Sorry, the announcement content could not be loaded.</p>";
                 });
