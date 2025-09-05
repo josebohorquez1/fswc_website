@@ -30,11 +30,6 @@ header.banner {
     align-items: center;
 }
 
-header.banner img {
-    width: 12rem;
-    height: auto;
-}
-
 header.banner h1 {
     flex: 1;
     margin: 0;
@@ -269,17 +264,6 @@ nav.sidebar i, footer i {
         gap: 1rem;
     }
     
-header.banner img {
-    width: 8rem;
-    height: auto;
-}
-
-header.banner h1 {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
-
         header.banner #menu-toggle {
         display: flex;
         align-items: center;
