@@ -15,8 +15,8 @@ body {
     min-height: 100vh;
     line-height: 1.6;
     background-color: #f9f9f9;
-    color: #333;
-    gap: 1rem;
+    color: #000;
+    gap: 6rem;
     font-size: 16px;
 }
 
@@ -25,23 +25,21 @@ header.banner {
     background-color: #1C5C9C;
     color: white;
     padding: 1rem;
+    gap: 1rem;
     display: flex;
-    margin-bottom: 6rem;
     align-items: center;
+}
+
+header.banner img {
+    width: 12rem;
+    height: auto;
 }
 
 header.banner h1 {
     flex: 1;
-    margin: 0 1rem;
-    font-size: 1.5rem;
+    margin: 0;
+    font-size: 2rem;
     font-weight: bold;
-}
-
-header.banner img {
-    max-height: 40px;
-    width: auto;
-    height: auto;
-    margin-left: auto;
 }
 
 header.banner #menu-toggle {
@@ -50,7 +48,6 @@ header.banner #menu-toggle {
 
 nav.sidebar {
     grid-area: nav;
-    background-color: #fff;
     padding: 1rem;
     border-right: 3px solid #1C5C9C;
     display: flex;
@@ -61,10 +58,9 @@ nav.sidebar ul {
     list-style: none;
     padding: 0;
     margin: 0;
-}
-
-nav.sidebar ul li {
-    margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 nav.sidebar ul li a {
@@ -78,28 +74,19 @@ nav.sidebar ul li a {
     transition: color 0.3s ease;
 }
 
-nav.sidebar ul li a:hover {
-    text-decoration: underline;
-    color: #D2451E;
-}
-
-nav.sidebar ul li a:active {
-    text-decoration: underline;
-    color: #D2451E;
-}
-
 nav #menu-close {
     display: none;
 }
 
 main {
     grid-area: main;
-    padding: 1.25rem;
-    margin-bottom: 6rem;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 section {
-    margin-bottom: 3rem;
     padding: 0;
 }
 
@@ -158,7 +145,6 @@ section img {
 }
 
 #announcementContent {
-  background-color: #fff;
   border: 1px solid #339999;
   border-radius: 0.75rem;
   padding: 1rem;
@@ -182,26 +168,15 @@ section img {
 }
 
 #announcementContent div p {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 a {
     color: #1C5C9C;
     text-decoration: none;    
-    font-size: 1.2rem;
 }
 
-a:hover {
-    color: #D2451E;
-    text-decoration: underline;
-}
-
-a:active {
-    color: #D2451E;
-    text-decoration: underline;
-}
-
-a:focus {
+a:hover, a:focus, a:active {
     color: #D2451E;
     text-decoration: underline;
 }
@@ -229,8 +204,6 @@ a:focus {
     text-align: left;
     margin-bottom: 0.5rem;
     border: none;
-    background: #004080;
-    color: white;
     font-size: 1.2rem;
     cursor: pointer;
 }
@@ -239,7 +212,7 @@ a:focus {
     display: flex;
     flex-direction: column;
     width: 100%;
-    gap: 0.25rem;
+    gap: 1rem;
 }
 
 .minutes-links[hidden] {
@@ -252,15 +225,9 @@ a:focus {
     font-size: 1.2rem;
 }
 
-.minutes-links a:hover {
-    text-decoration: underline;
-    color: #D2451E;
-}
-
 footer {
     grid-area: footer;
     background-color: #1C5C9C;
-    color: #fff;
     text-align: center;
     padding: 1rem;
 }
@@ -279,12 +246,13 @@ nav.sidebar i, footer i {
     body {
         display: flex;
         flex-direction: column;
+        gap: 6rem;
         margin: 0;
         min-height: 100vh;
         font-size: 16px;
         line-height: 1.6;
         background-color: #f9f9f9;
-        color: #333;
+        color: #000;
     }
 
     header.banner {
@@ -295,16 +263,18 @@ nav.sidebar i, footer i {
         width: 100%;
         min-height: 60px;
         display: flex;
-        margin-bottom: 6rem;
         background-color: #1C5C9C;
         color: white;
         align-items: center;
-        gap: 0.5rem;
+        gap: 1rem;
     }
     
     header.banner #menu-toggle {
-        display: block;
-        padding: 0.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.75rem;
+        height: 2.75rem;
         font-size: 1.25rem;
     }
 
@@ -312,8 +282,8 @@ nav.sidebar i, footer i {
         flex: 1;
         display: flex;
         flex-direction: column;
-        padding: 1.25rem;
-        margin-bottom: 6rem;
+        gap: 3rem;
+        padding: 1rem;
     }
 
     nav.sidebar {
@@ -357,17 +327,14 @@ nav.sidebar i, footer i {
 
     nav.sidebar ul {
         list-style: none;
-        padding: 1.5rem 0 0 0;
+        padding: 1rem 0 0 0;
         margin: 0;
         display:flex;
         flex-direction: column;
+        gap: 3rem;
         flex: 1;
         align-items: center;
         overflow-y: auto;
-    }
-
-    nav.sidebar ul li {
-        margin: 3rem 0;
     }
 
     nav.sidebar ul li a {
@@ -380,10 +347,6 @@ nav.sidebar i, footer i {
         text-decoration: none;
     }
 
-    nav.sidebar ul li a:focus {
-        color: #D2451E;
-        text-decoration: underline;
-    }
 
     div.modal {
         position: fixed;
