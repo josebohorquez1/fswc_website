@@ -6,6 +6,18 @@ document.addEventListener("DOMContentLoaded", () => {
     function isMobile() {
         return window.matchMedia("(max-width:768px)").matches;
     }
+    function openMobileNav() {
+        menu_toggle.setAttribute("aria-expanded", "true");
+        sidebar.classList.add("active");
+        sidebar.inert = false;
+        document.querySelectorAll("body > *:not(nav)").forEach(el => el.inert = true);
+    }
+    function closeMobileNav() {
+        menu_toggle.setAttribute("aria-expanded", "false");
+        sidebar.classList.remove("active");
+        sidebar.inert = true;
+        document.querySelectorAll("body > *:not(nav)").forEach(el => el.inert = false);
+    }
     function loadMinutes() {
         main_element.innerHTML = `
                                     <section id="minutesContainer" aria-labelledby="meetingMinutesHeading">
@@ -161,30 +173,14 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("hashchange", () => {
         const section = window.location.hash.substring(1);
         loadSection(section);
-        if (isMobile() && sidebar.classList.contains("active")) {
-            menu_toggle.setAttribute("aria-expanded", "false");
-            sidebar.inert = true;
-            sidebar.classList.remove("active");
-        }
+        if (isMobile() && sidebar.classList.contains("active")) closeMobileNav();
     });
     const initial_section = window.location.hash.substring(1);
     if (isMobile()) sidebar.inert = true;
     loadSection(initial_section);
     menu_toggle.addEventListener("click", () => {
-        if (!sidebar.classList.contains("active")) {
-            sidebar.classList.add("active");
-            sidebar.inert = false;
-            menu_toggle.setAttribute("aria-expanded", "true");
-        }
-        else {
-            sidebar.classList.remove("active");
-            sidebar.inert = true;
-            menu_toggle.setAttribute("aria-expanded", "false");
-        }
+        if (!sidebar.classList.contains("active")) openMobileNav();
+        else closeMobileNav();
     });
-    menu_close.addEventListener("click", () => {
-        sidebar.classList.remove("active");
-        sidebar.inert = true;
-        menu_toggle.setAttribute("aria-expanded", "false");
-    });
+    menu_close.addEventListener("click", () => closeMobileNav());
 });

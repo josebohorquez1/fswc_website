@@ -367,7 +367,7 @@ nav.sidebar i, footer i {
     }
 
     nav.sidebar ul li {
-        margin: 0.5rem 0;
+        margin: 3rem 0;
     }
 
     nav.sidebar ul li a {
@@ -405,12 +405,15 @@ nav.sidebar i, footer i {
         position: absolute;
         top: 1rem;
         right: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
         background: none;
         border: none;
-        padding: 1rem;
         color: #1C5C9C;
-        font-size: 1.5rem;
+        font-size: 1.25rem;
         cursor: pointer;
+        margin-left: 0.5rem;
     }
 
     div.modal #announcementContent {
