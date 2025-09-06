@@ -118,25 +118,27 @@ document.addEventListener("DOMContentLoaded", () => {
                     if (!isMobile()) main_element.appendChild(article);
                     else {
                         let modal = document.querySelector(".modal");
+                        let close_button;
                         if (!modal) {
                         modal = document.createElement("div");
                         modal.className = "modal";
                         modal.setAttribute("role" ,"dialog");
                         modal.setAttribute("aria-label", "Announcement Details");
-                        document.body.appendChild(modal);
+                        close_button = document.createElement("button");
+                        close_button.className = "modal-close";
+                        close_button.textContent = "X";
+                        close_button.setAttribute("aria-label", "Close");
+                            document.body.appendChild(modal);
                                 }
                                 modal.hidden = false;
                                 const other_elements = document.querySelectorAll("body > *:not(.modal)");
                                 other_elements.forEach(el => el.inert = true);
-                        const close_button = document.createElement("button");
-                        close_button.className = "modal-close";
-                        close_button.textContent = "X";
-                        close_button.setAttribute("aria-label", "Close");
-                        close_button.focus();
+                                close_button.focus();
                         close_button.addEventListener("click", () => {
                             modal.hidden = true;
-                            l.focus();
                             other_elements.forEach(el => el.inert = false);
+                            sidebar.inert = true;
+                            l.focus();
                         });
                         modal.appendChild(close_button);
                         modal.appendChild(article);
