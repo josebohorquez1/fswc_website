@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Reader</title>
+        <link rel="stylesheet" href="../css/reader.css">
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    </head>
+    <body>
+        <header id="banner"><h1>Reader</h1></header>
+        <main id="readerContainer"></main>
+        <script>
+            const params = new URLSearchParams(window.location.search);
+            const file = params.get("file");
+            if (!file) {
+                document.getElementById("readerContainer").innerHTML = "<p>No file provided. Please return to the <a href='../index.html'>Home Page</a>.</p>";
+            } else {
+                fetch(file).then(res => res.text()).then(md => {
+                    document.getElementById("readerContainer").innerHTML = marked.parse(md);
+                }).catch(err => {
+                    document.getElementById("readerContainer").innerHTML = "<p>Error loading file. Please try again later.</p>";
+                    console.error(err);
+                });
+            }
+        </script>
+    </body>
+</html>
+  
