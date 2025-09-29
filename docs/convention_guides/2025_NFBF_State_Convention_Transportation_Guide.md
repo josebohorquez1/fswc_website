@@ -4,52 +4,17 @@
 
 Dear Reader:
 
-If you are reading this, it means that you are excited to attend the 2025 Florida State Convention in Altamonte Springs at the Hilton Hotel. As blind travelers, transportation can often be one of the most challenging parts of planning a trip. Questions like “How do I get to Orlando?” and “What transportation options are available once I arrive?” are common and valid. This guide is here to help. It provides an overview of public transportation options in and around Altamonte Springs, including how to get to the city, how to reach the hotel including information about the different bus stations, and local transportation in the area. Our goal is to make your travel experience as smooth and stress-free as possible. If you have any questions, don’t hesitate to reach out to the Statewide Chapter at [statewide@nfbflorida.org](mailto:statewide@nfbflorida.org), or the Central Florida Chapter at [commmdb@aol.com](mailto:commmdb@aol.com) with the subject line “transportation”. A table of contents is provided below to make the guide simpler to read.
+If you are reading this, it means that you are excited to attend the 2025 Florida State Convention in Altamonte Springs at the Hilton Hotel. As blind travelers, transportation can often be one of the most challenging parts of planning a trip. Questions like “How do I get to Orlando?” and “What transportation options are available once I arrive?” are common and valid. This guide is here to help. It provides an overview of public transportation options in and around Altamonte Springs, including how to get to the city, how to reach the hotel including information about the different bus stations, and local transportation in the area. Our goal is to make your travel experience as smooth and stress-free as possible. If you have any questions, don’t hesitate to reach out to the Statewide Chapter at [statewide@nfbflorida.org](mailto:statewide@nfbflorida.org), or the Central Florida Chapter at [commmdb@aol.com](mailto:commmdb@aol.com) with the subject line “transportation”.
 
 Best,
 
 The Florida Statewide Chapter and the Central Florida Chapter
 
-# **Table of Contents**
-
-	A table of contents is provided to make the guide easy to navigate. Main sections are marked with the words main section while subsections are marked with regular links. Click (press enter) on any of the links below to navigate to a specific section or subsection. You can also navigate by page number in MS Word by pressing control+g, then type the page number, then press enter, and then press the escape key. If viewing the document as a PDF, navigate to the different sections by using the page numbers.
-
-Contents  
-[Getting to Altamonte Springs(main section)	3](#getting-to-altamonte-springs)
-
-[Orlando International Airport (MCO)	4](#orlando-international-airport-\(mco\))
-
-[Brightline Trains	5](#brightline-trains)
-
-[Amtrak	6](#amtrak)
-
-[Greyhound	9](#greyhound)
-
-[FlixBus	10](#flixbus)
-
-[Getting to the Hotel(main section)	12](#getting-to-the-hotel)
-
-[Orlando International Airport (MCO)	12](#orlando-international-airport-\(mco\)-1)
-
-[Brightline Station	16](#brightline-station)
-
-[Winter Park Amtrak Station (closest station to hotel)	20](#winter-park-amtrak-station-\(closest-station-to-hotel\))
-
-[Orlando Greyhound and Flix Station	24](#orlando-greyhound-and-flix-station)
-
-[Getting Around Altamonte Springs and the Orlando Area(main section)	29](#getting-around-altamonte-springs-and-the-orlando-area)
-
-[Lynx	29](#lynx)
-
-[SunRail	33](#sunrail)
-
-[Paratransit	36](#paratransit)
-
-# **Getting to Altamonte Springs** {#getting-to-altamonte-springs}
+# **Getting to Altamonte Springs** 
 
 Altamonte Springs is a suburb located just north of Orlando. While it does not have its own intercity bus or train stations, nearby Orlando does. As a result, reaching Altamonte Springs typically begins with traveling to Orlando. This section outlines the main transportation options available for getting to Orlando from across Florida, including bus, train, and air travel. In the next section, getting to the Hotel, more information about the specific Orlando stations will be provided.
 
-## Orlando International Airport (MCO) {#orlando-international-airport-(mco)}
+## Orlando International Airport (MCO) 
 
 Orlando International Airport (MCO) is one of the busiest airports in Florida and serves as a major transportation hub. Many other Florida airports offer connecting flights to MCO. Below are some of the most common routes and airlines that provide these connections:
 
@@ -71,7 +36,7 @@ Orlando International Airport (MCO) is one of the busiest airports in Florida an
 * Key West International Airport(EYW)  
   * Breeze Airways
 
-## Brightline Trains {#brightline-trains}
+## Brightline Trains 
 
 Brightline is one of Florida’s newest high-speed rail services, offering a modern and convenient way to travel across the state. In 2023, Brightline opened a station at Orlando International Airport (MCO), making it easier than ever to reach Orlando by train. Brightline trains can reach speeds of up to 150 miles per hour, providing a fast and comfortable ride. As of now, the Brightline route includes the following cities:
 
@@ -81,7 +46,7 @@ Brightline is one of Florida’s newest high-speed rail services, offering a mod
 * Boca Raton  
 * West Palm Beach
 
-## Amtrak {#amtrak}
+## Amtrak 
 
 Amtrak is the national passenger rail service, operating in 46 states, including Florida. In addition to its train routes, Amtrak also offers chartered motor coach services that connect passengers from cities not directly served by train stations to the nearest Amtrak stops. For those attending the convention in Altamonte Springs, the nearest Amtrak station is located in Winter Park, just a short ride from the Hilton Hotel. Amtrak operates two long-distance routes that travel through Florida:
 
@@ -136,7 +101,7 @@ Floridian (South to North)
 
 If you live near the DeLand or Kissimmee Amtrak stations—or have an easy way to reach them, you may want to consider using SunRail. As of 2025, the SunRail commuter rail line extends to DeLand and offers affordable, frequent service throughout Central Florida. Taking SunRail southbound from DeLand or northbound from Kissimmee allows you to reach the Altamonte Springs SunRail station, which is located near the convention hotel. For more details about using SunRail to reach the hotel, please refer to the SunRail subsection in the “Getting to the Hotel” section.
 
-## Greyhound {#greyhound}
+## Greyhound 
 
 Greyhound is one of the oldest and most well-known intercity bus companies in the United States. Thanks to Orlando’s central location within Florida, there are numerous Greyhound routes that provide direct service to the city. Below is a list of Florida cities with direct Greyhound service to Orlando:
 
@@ -163,7 +128,7 @@ Greyhound is one of the oldest and most well-known intercity bus companies in th
 
 Note: While many cities have direct routes, some locations—particularly in North Florida and the Panhandle—may require a transfer. For example, travelers coming from the Panhandle may need to transfer in Tallahassee to continue on to Orlando.
 
-## FlixBus {#flixbus}
+## FlixBus 
 
 FlixBus is a relatively new addition to intercity bus services in the United States, offering budget-friendly fares and environmentally conscious vehicles. The company has rapidly expanded across Florida and is now a convenient option for reaching Orlando. FlixBus owns Greyhound and often shares stations and booking systems with them. You can book tickets for both services using the same app or website. The following cities in Florida are served by FlixBus with routes to Orlando:
 
@@ -190,11 +155,11 @@ FlixBus is a relatively new addition to intercity bus services in the United Sta
 
 Note: For some cities, a transfer is required to reach Orlando.
 
-# **Getting to the Hotel** {#getting-to-the-hotel}
+# **Getting to the Hotel** 
 
 Once you've arrived in the Orlando area, your next step is reaching the Hilton Hotel in Altamonte Springs. This section provides options for getting to the hotel from the main arrival points listed earlier in this guide. For public transportation, the listed options are not an exhaustive list; there are other ways to get to the hotel from your respective bus station. The options listed here are the simplest way to get from origin bus or train station to the hotel. For more information on public transportation options. Refer to the Apple or Google maps apps or the SunRail and Lynx websites.
 
-## Orlando International Airport (MCO) {#orlando-international-airport-(mco)-1}
+## Orlando International Airport (MCO) 
 
 Address
 
@@ -256,7 +221,7 @@ The airport is connected to the Lynx network. Lynx buses are located at terminal
 
 For more information on bus routes and fares, see the Lynx subsection in the “Getting Around Orlando” section.
 
-## Brightline Station {#brightline-station}
+## Brightline Station 
 
 	Address
 
@@ -304,7 +269,7 @@ The Brightline station is directly adjacent to Orlando International Airport, ne
 
 For more information on bus routes and fares, see the Lynx subsection in the “Getting Around Orlando” section.
 
-## Winter Park Amtrak Station (closest station to hotel) {#winter-park-amtrak-station-(closest-station-to-hotel)}
+## Winter Park Amtrak Station (closest station to hotel) 
 
 Address
 
@@ -357,7 +322,7 @@ The Winter Park station is also a SunRail station, offering a direct connection 
 
 For more information on bus routes and fares, see the Lynx subsection in the “Getting Around Orlando” section.
 
-## Orlando Greyhound and Flix Station {#orlando-greyhound-and-flix-station}
+## Orlando Greyhound and Flix Station 
 
 Address
 
@@ -419,11 +384,11 @@ Walk approximately 4 minutes to the John Young Pkwy and Amelia St stop:
 
 For more information on bus routes and fares, see the Lynx subsection in the “Getting Around Orlando” section.
 
-# **Getting Around Altamonte Springs and the Orlando Area** {#getting-around-altamonte-springs-and-the-orlando-area}
+# **Getting Around Altamonte Springs and the Orlando Area** 
 
 	The Orlando area offers several public transportation options, including buses, commuter trains, and paratransit services. This section covers the Lynx bus service, SunRail commuter train, and the Access Lynx door-to-door paratransit service. While this guide does not cover Uber and Lyft in detail, these rideshare services are also widely available in Altamonte Springs.
 
-## Lynx {#lynx}
+## Lynx 
 
 Website
 
@@ -498,7 +463,7 @@ Buses 436n and bus 01 have the following frequencies:
 
 For assistance, call (407) 841-5969.
 
-## SunRail {#sunrail}
+## SunRail 
 
 	SunRail is the commuter train service of Central Florida. It covers four counties with the train line stretching over 60 miles. Below is some information about the service.
 
@@ -559,7 +524,7 @@ To purchase a ticket, you have several options.
 
 Account creation is required.
 
-## Paratransit {#paratransit}
+## Paratransit 
 
 	The Orlando area has a door-to-door service that serves Orange, Seminole, and Osceola counties. Below is some information regarding our paratransit service, Access Lynx.
 
