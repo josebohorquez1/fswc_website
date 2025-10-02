@@ -124,6 +124,10 @@ See you on deck\!\!\!\!\!
 
 ## **Saturday, October 4, 2025**
 
+### **7:30am				Devotions** 
+
+Conrad
+
 ### **7:15am \- 8:45am		Presidents and Vice Presidents Breakfast** 
 
 Capital 1   
@@ -163,37 +167,34 @@ Z’Leah Liburd, President, Florida Statewide Chapter, National Federation of th
 Doug Ingram, Tallahassee Chapter   
 National Federation of the Blind of Florida
 
-### **9:20am	Welcome from the City of Altamonte Springs** 
-
-Pat Bates, Mayor   
-City of Altamonte Springs, Florida
-
-### **9:40am	Convention Planning Committee Report**
+### **9:20am	Convention Planning Committee Report**
 
 Peggy Fleischer, Second Vice President, National Federation of the Blind of Florida
 
-### **9:45am 				National Report**
+### **9:30am 				National Report**
 
 Kevan Worley, National Rep National Federation of the Blind
 
-### **10:25am	Report from the Division of Blind Services**
+### 
 
-Robert Doyle, Director   
-Florida Division of Blind Services
+### **10:15am	PAC Report**
 
-### **10:45am	National Association of Blind Students Report**
+Jorge Hernandez, PAC Coordinator   
+President, National Federation of the Blind of Florida
+
+### **10:25am	National Association of Blind Students Report**
 
 Zachary Ledford, Second Vice President, National Association of Blind Students  
 
-### **11:00am 	Why Am I a Federationist?**
+### **10:35am 	Why Am I a Federationist?**
 
 Z’Leah Liburd, President, Florida Statewide Chapter
 
-### **11:05am 	Presentation of 2025 Florida Leadership Seminarians**
+### **10:40am 	Presentation of 2025 Florida Leadership Seminarians**
 
 Jorge Hernandez, President, Miami-Dade Chapter
 
-### **11:10am 	The Access Technology Project**
+### **10:50am 	The Access Technology Project**
 
 ### Ayse Torres, Ph.D., CRC, LMHC 
 
@@ -201,23 +202,55 @@ Jorge Hernandez, President, Miami-Dade Chapter
 
 ### Florida Atlantic University Professor
 
-### **11:30am 	Lions Vision and Hearing Foundation** 
+### **11:05am 	Lions Vision and Hearing Foundation** 
 
 Dennis Dulniak, Lions Club MD350
 
-### **11:50am 	Why Am I a Federationist?**
+### **11:15am 	Why Am I a Federationist?**
 
 ### Javier Diaz, Board of Directors 
 
 ### National Federation of the Blind of Florida
 
-### **11:55am	Announcements**
+### **11:20am 	Kennth Jernigan Leadership and Service Program**
+
+### Javier Diaz, Board of Directors 
+
+### National Federation of the Blind of Florida
+
+### 
+
+### **11:25am 	Calling all Parents**
+
+### Javier Diaz, Board of Directors 
+
+### National Federation of the Blind of Florida
+
+### 
+
+### **11:15am 	National Legislative Report**
+
+### Russ Davis, Board of Directors 
+
+### National Federation of the Blind of Florida
+
+### **11:25am 	State Legislative Report**
+
+### Camille Tate, President 
+
+### National Federation of the Blind of Florida
+
+### 
+
+### **11:35am	Announcements**
 
 ### 
 
 ### **12:00pm			Adjournment**
 
 ### **12:00pm \- 1:00pm	Lunch \- On your own**
+
+Lunch Buffet is available in the U restaurant
 
 ### **12:00pm \- 1:30pm	Secretaries’ Luncheon** 
 
@@ -302,8 +335,8 @@ An exciting business built with accessibility in mind. Patrick Long, CEO and co-
 ### **4:00pm \- 4:50pm	Performing Arts while Blind**
 
 					Capital 2  
-Matt Wiemler, Statewide Chapter   
-Come and meet the Saxman\! Matt Wiemler is a blind musician who has taken his love of music into the classroom\! Interested in the performing arts? Ever wondered how to create music accessibly? Visit the workshop with your questions.
+Matt Weihmuller, Statewide Chapter   
+Come and meet “the Saxman”\! Matt Wiemler is a blind musician who has taken his love of music into the classroom\! Interested in the performing arts? Ever wondered how to create music accessibly? Visit the workshop with your questions.
 
 ### **5:00pm \- 6:00pm		Florida Statewide Chapter** 
 
@@ -319,6 +352,10 @@ Royal Palm Ballroom
 Bring your dolla’ bills\! Have some fun while bidding on items at our Dolla’ Auction\! This is a fun event that fundraises for our affiliate. Each bid is in one-dollar increments. Raise your hand and yell out your name “got a dolla’\!” You could win great items. But beware, someone else might have a dolla’ to beat you\! 
 
 ## **Sunday, October 5, 2025**
+
+### **7:30am				Devotions** 
+
+Conrad
 
 ### **7:30am \- 8:30am		Nominating Committee**  
 
@@ -402,6 +439,8 @@ Jorge Hernandez, Chair, Nominating Committee, National Federation of the Blind o
 
 ### **12:00pm \- 1:00pm	Lunch \- On your own**
 
+Lunch Buffet is available in the U restaurant
+
 ### **12:00pm \- 1:30pm	Treasurers’ Luncheon**
 
 Capital 1  
@@ -436,14 +475,14 @@ Coming together after the election. With voting behind us for the 2025 general e
 ### **Non-24**
 
 Waldorf  
-Vicki Pretti, Registered Nurse   
+Vicki Preddy, Registered Nurse   
 Vanda Pharmaceuticals   
 Ever wonder why you have difficulty sleeping at night? Or, cannot stay awake during the day? Ask your questions about Circadian rhythms and the body clock with Vicki Pretti from Vanda Pharmaceuticals.
 
 ### **3:00pm \- 3:50pm	Telling Our Truth: Storytelling for Advocacy and Impact**
 
 Conrad  
-Adrian Keiv, Board of Directors, 	Jacksonville Chapter   
+Adriann Keve, Board of Directors, 	Jacksonville Chapter   
 This workshop draws inspiration from How to Tell a Story by The Moth \- a guide to crafting personal narratives that resonate. We will explore how storytelling can be a powerful tool for advocacy, education, and connection. Whether you're speaking to legislators, educating the public, or sharing your lived experience, your story can shift perspectives and spark change.
 
 ### **3:00pm \- 3:50pm		Sighted Supporters Meeting**
@@ -472,7 +511,8 @@ Want to learn how to cope with the mental side of blindness? Dina Hargrave from 
 Crystal Salons ABC  
 Russ Davis, Board of Directors   
 National Federation of the Blind of Florida   
-Interested in Ham radio? Ever wondered what Ham radio operators do on the radio? Would you like to become a Ham radio operator? Visit the Exhibit Hall to ask those questions\! 
+Andy Rood, KM4CSX, Greater Jacksonville Chapter and Dave Hillebrandt, W4CI  
+Interested in amateur radio? Ever wondered if the blind are involved in Ham radio? Several blind hams will tell you just how open, accessible and fantastic the hobby of a thousand hobbies can be. Join the presenters and other hams inside the Exhibit Hall to find out why it's so much fun and so easy to get on the air.
 
 ## **Convention Banquet**
 
@@ -528,15 +568,19 @@ Democracy Live Inc
 ## **Security Sponsors**
 
 Blind Girl Designs  
+Florida Visually Impaired and Blind Services, LLC  
 Florida Vision Technology  
 Glidance  
 Innosearch AI, Inc.  
+The Magnification Company  
+Paul Odham’s Opals and Gems  
 Patriot Vision Industries  
 Unseen Potential  
 VisualEyes Access
 
-**Opportunity Sponsor**  
-Paul Odham’s Opals and Gems
+## **Opportunity Sponsors**
+
+## En-Vision America
 
 ## **Non-Profit Exhibitors**
 
